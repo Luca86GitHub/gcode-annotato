@@ -1,0 +1,40 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment.line.gcode",
+        "settings": {
+          "foreground": "#7EC699"
+        }
+      },
+      {
+        "scope": "keyword.control.l-function.gcode",
+        "settings": {
+          "foreground": "#FFD700",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "keyword.control.m-function.gcode",
+        "settings": {
+          "foreground": "#FF8C00",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "variable.other.r-function.gcode",
+        "settings": {
+          "foreground": "#B19CD9",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "entity.name.function.at-function.gcode",
+        "settings": {
+          "foreground": "#4EC9B0",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  }
+}
