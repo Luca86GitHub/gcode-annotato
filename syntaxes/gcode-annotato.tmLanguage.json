@@ -1,0 +1,119 @@
+{
+  "scopeName": "source.gcode-annotato",
+  "patterns": [
+    { "include": "#layerCommands" },
+    { "include": "#commands" },
+    { "include": "#numbers" },
+    { "include": "#comments" },
+    { "include": "#annotations" },
+    { "include": "#labels" },
+    { "include": "#jumps" },
+    { "include": "#r-registers" },
+    { "include": "#at-references" },
+    { "include": "#axis-assignments" }
+  ],
+  "repository": {
+    "layerCommands": {
+      "patterns": [
+        {
+          "name": "constant.language.L.gcode",
+          "match": "\\bL\\d+\\b"
+        },
+        {
+          "name": "constant.language.M.gcode",
+          "match": "\\bM\\d+\\b"
+        },
+        {
+          "name": "constant.language.R.gcode",
+          "match": "\\bR\\d+\\b"
+        }
+      ]
+    },
+    "commands": {
+      "patterns": [
+        {
+          "name": "keyword.control.gcode",
+          "match": "\\b(G\\d+|M\\d+)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.gcode",
+          "match": "(-?\\d+\\.?\\d*)"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.bracket.gcode",
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.comment.begin.gcode" }
+          },
+          "end": "$",
+          "patterns": []
+        },
+        {
+          "name": "comment.line.semicolon.gcode",
+          "begin": ";",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.comment.begin.gcode" }
+          },
+          "end": "$",
+          "patterns": [{ "include": "#annotations" }]
+        }
+      ]
+    },
+    "annotations": {
+      "patterns": [
+        {
+          "name": "entity.name.function.layer.gcode",
+          "match": "(?<=;\\s*)layer\\s+\\d+"
+        },
+        {
+          "name": "entity.name.function.temp.gcode",
+          "match": "(?<=;\\s*)temp(eratura)?\\s*[:=]?\\s*\\d+"
+        },
+        {
+          "name": "entity.name.function.section.gcode",
+          "match": "(?<=;\\s*)(infill|wall|support)"
+        }
+      ]
+    },
+    "labels": {
+      "name": "entity.name.label.gcode",
+      "match": "^:[A-Za-z_][A-Za-z0-9_]*"
+    },
+    "jumps": {
+      "name": "keyword.control.jump.gcode",
+      "match": "\\bJ\\s+[A-Za-z_][A-Za-z0-9_]*\\b"
+    },
+    "r-registers": {
+      "name": "variable.parameter.r-register.gcode",
+      "match": "#R\\d+"
+    },
+    "at-references": {
+      "name": "entity.name.function.at-reference.gcode",
+      "match": "@\\d+"
+    },
+    "axis-assignments": {
+      "patterns": [
+        {
+          "name": "variable.parameter.axis.gcode",
+          "match": "\\b[XZYFABCK]\\b"
+        },
+        {
+          "name": "keyword.operator.assignment.gcode",
+          "match": "="
+        },
+        {
+          "name": "constant.numeric.gcode",
+          "match": "-?\\d+(\\.\\d+)?"
+        }
+      ]
+    }
+  }
+}
