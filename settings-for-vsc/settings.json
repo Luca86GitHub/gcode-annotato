@@ -1,0 +1,98 @@
+{
+ "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "constant.language.L.gcode",
+        "settings": {
+          "foreground": "#62e5f7",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "constant.language.M.gcode",
+        "settings": {
+          "foreground": "#ffb04f",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "constant.language.R.gcode",
+        "settings": {
+          "foreground": "#8d8dff",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "comment.line.bracket.gcode",
+        "settings": {
+          "foreground": "#7B68EE", // blu-viola
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "entity.name.label.gcode",
+        "settings": {
+          "foreground": "#ffffff",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.control.jump.gcode",
+        "settings": {
+          "foreground": "#ff7676",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": ["comment.line.semicolon.gcode", "comment.line.bracket.gcode"],
+        "settings": {
+          "foreground": "#7EC699",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable.parameter.r-register.gcode",
+        "settings": {
+          "foreground": "#B19CD9",
+          "fontStyle": "bold italic"
+        }
+      },
+      {
+        "scope": "entity.name.function.at-reference.gcode",
+        "settings": {
+          "foreground": "#4EC9B0",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "variable.parameter.axis.gcode",
+        "settings": { "foreground": "#4FC1FF", "fontStyle": "bold" }
+      },
+      {
+        "scope": "keyword.operator.assignment.gcode",
+        "settings": { "foreground": "#CCCCCC" }
+      },
+      {
+        "scope": "constant.numeric.gcode",
+        "settings": { "foreground": "#FFD700" }
+      },
+      {
+        "scope": "constant.language.d-function.gcode",
+        "settings": {
+          "foreground": "#FF69B4",  // rosa/shock
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "string.quoted.double.gcode",
+        "settings": {
+          "foreground": "#FFA500",  // arancione
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "files.associations": {
+    "*.gcode": "gcode-annotato"
+  }
+}

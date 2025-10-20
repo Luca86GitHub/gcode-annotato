@@ -3,7 +3,7 @@
   "displayName": "Gcode Annotato",
   "description": "Evidenziazione G-code con commenti colorati",
   "version": "0.0.1",
-  "publisher": "Luca Di Lenardo",
+  "publisher": "LucaDiLenardo",
   "engines": {
     "vscode": "^1.80.0"
   },

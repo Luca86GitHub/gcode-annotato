@@ -10,7 +10,9 @@
     { "include": "#jumps" },
     { "include": "#r-registers" },
     { "include": "#at-references" },
-    { "include": "#axis-assignments" }
+    { "include": "#axis-assignments" },
+    { "include": "#d-functions" },
+    { "include": "#log-strings" }
   ],
   "repository": {
     "layerCommands": {
@@ -114,6 +116,19 @@
           "match": "-?\\d+(\\.\\d+)?"
         }
       ]
+    },
+    "d-functions": {
+      "name": "constant.language.d-function.gcode",
+      "match": "\\bD\\d+\\b"
+    },
+    "log-strings": {
+      "name": "string.quoted.double.gcode",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.gcode" }
+      },
+      "end": "$",
+      "patterns": []
     }
   }
 }
